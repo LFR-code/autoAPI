@@ -2,10 +2,11 @@
 name: autoAPI
 
 # Controls when the action will run.
-on:
-  schedule:
-    # - cron:  '30 * * * *' # runs at every minute 30 of every hr of every day
-    - cron:  '28 * * * *' # runs at every minute 0 and 30 of every hr of every day
+# on:
+#   schedule:
+#     # - cron:  '30 * * * *' # runs at every minute 30 of every hr of every day
+#     - cron:  '28 * * * *' # runs at every minute 0 and 30 of every hr of every day
+on: [push]
 
 
 jobs: 

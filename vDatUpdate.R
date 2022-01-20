@@ -8,6 +8,7 @@
 # 2) Merges API data with historial API data requests
 
 library(dplyr)
+library(readr)
 library(httr)
 # library(jsonlite)
 
