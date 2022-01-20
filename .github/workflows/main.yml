@@ -4,13 +4,13 @@ name: autoAPI
 # Controls when the action will run.
 on:
   schedule:
-    - cron:  '15 * * * *' # runs at every 15th minute of every hr of every day
+    - cron:  '0 * * * *' # runs at every 15th minute of every hr of every day
 #     - cron:  '28 * * * *' # runs at every minute 0 and 30 of every hr of every day
 # on: [push] # for testing
 
 
 jobs: 
-  run_vDatUpdate:
+  updateVesselData:
     # The type of runner that the job will run on
     runs-on: macos-latest
 
