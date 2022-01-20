@@ -5,11 +5,11 @@ name: autoAPI
 on:
   schedule:
     # - cron:  '30 * * * *' # runs at every minute 30 of every hr of every day
-    - cron:  '0,22 * * * *' # runs at every minute 0 and 30 of every hr of every day
+    - cron:  '28 * * * *' # runs at every minute 0 and 30 of every hr of every day
 
 
 jobs: 
-  autoAPI:
+  run_vDatUpdate:
     # The type of runner that the job will run on
     runs-on: macos-latest
 
