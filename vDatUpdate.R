@@ -34,8 +34,11 @@ vDatUpdate <- function()
 
     write.csv(vDat, 'apiData/vDat.csv',row.names=FALSE)
 
-  }  else
-    cat('ERROR: API call not successful \n')
+  }  else {
+      filename <- paste('vDat',round(as.numeric(Sys.time()),0),'.txt', sep='') 
+      writeLines(content(apiDat), 'vDatTest.txt')
+  }
+    
 
   return(apiDat)  
 }
