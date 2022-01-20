@@ -5,7 +5,7 @@ name: autoAPI
 on:
   schedule:
     # - cron:  '30 * * * *' # runs at every minute 30 of every hr of every day
-    - cron:  '0,30 * * * *' # runs at every minute 0 and 30 of every hr of every day
+    - cron:  '0,22 * * * *' # runs at every minute 0 and 30 of every hr of every day
 
 
 jobs: 
