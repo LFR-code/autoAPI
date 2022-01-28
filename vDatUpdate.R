@@ -1,16 +1,15 @@
 # vDatUpdate.R
 
 # Author: B Doherty, Landmark Fisheries Research
-# Last Edit: Jan 18, 2021
+# Last Edit: Jan 28, 2021
 
 # Details:
-# 1) Runs API data request from Marine Traffic and save .csv
-# 2) Merges API data with historial API data requests
+# 1) Run API data request from Marine Traffic and save .csv
+# 2) Merges API data with historical API data requests
 
 library(dplyr)
 library(readr)
 library(httr)
-# library(jsonlite)
 
 vDatUpdate <- function()
 {
