@@ -39,7 +39,7 @@ vDatUpdate <- function()
 
   }  else {
       filename <- paste('ERROR',round(as.numeric(Sys.time()),0),'.txt', sep='') 
-      writeLines(content(apiDat), file.path('apiData/filename'))
+      writeLines(content(apiDat), file.path('apiData',filename))
   }
     
 
