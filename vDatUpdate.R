@@ -35,8 +35,8 @@ vDatUpdate <- function()
     write.csv(vDat, 'apiData/vDat.csv',row.names=FALSE)
 
   }  else {
-      filename <- paste('vDat',round(as.numeric(Sys.time()),0),'.txt', sep='') 
-      writeLines(content(apiDat), 'vDatTest.txt')
+      filename <- paste('ERROR',round(as.numeric(Sys.time()),0),'.txt', sep='') 
+      writeLines(content(apiDat), file.path('apiData/filename'))
   }
     
 
