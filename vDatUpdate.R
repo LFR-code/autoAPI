@@ -13,7 +13,7 @@ library(httr)
 
 vDatUpdate <- function()
 {
-  apiDat <- GET("https://services.marinetraffic.com/api/exportvessels/v:8/b4e695ebc89e35240878ced885d1b5cb61f7fea8/timespan:10/protocol:csv")
+  apiDat <- GET("https://services.marinetraffic.com/api/exportvessels/v:8/b4e695ebc89e35240878ced885d1b5cb61f7fea8/timespan:10/protocol:csv/msgtype:extended")
 
   if(apiDat$status==200)
   {  
@@ -26,6 +26,9 @@ vDatUpdate <- function()
 
     filename <- paste('vDat',round(as.numeric(Sys.time()),0),'.csv', sep='') 
     write.csv(lastDat, file.path('apiData',filename), row.names=FALSE)
+
+    # select columns for simple msgtype to merge with older data
+    lastDat <- dplyr::select(lastDat, MMSI:UTC_SECONDS)
 
     vDat    <- read.csv('apiData/vDat.csv') 
 
